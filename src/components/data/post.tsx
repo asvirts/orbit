@@ -6,7 +6,6 @@ export type Post = {
   likes: number
   comments: number
   shares: number
-  images: string[]
   text: string
 }
 
@@ -15,7 +14,7 @@ import Image from "next/image"
 
 export default function UserPost(props: Post) {
   return (
-    <div className="flex flex-col">
+    <div className="flex">
       <div className="flex justify-between">
         <div>
           <div>
@@ -38,9 +37,6 @@ export default function UserPost(props: Post) {
         <div>
           <p>{props.text}</p>
         </div>
-      </div>
-      <div>
-        <Image src={props.images[0]} alt={props.profile_name} fill={true} />
       </div>
       <div className="flex justify-between">
         <div>
